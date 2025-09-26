@@ -56,9 +56,9 @@ void setup() {
   // Arduino Uno can usually do 800 KHz, and 32-bit microcontrollers 1 MHz.
   i2c->setClock(800000);
 
-  // Set brightness to max and bring controller out of shutdown state
-  matrix.setLEDscaling(0xFF);
-  matrix.setGlobalCurrent(0xFF);
+  // Set brightness to 70% and bring controller out of shutdown state
+  matrix.setLEDscaling(0xB3);    // 70% of 0xFF (255) = 179 = 0xB3
+  matrix.setGlobalCurrent(0xB3); // 70% of 0xFF (255) = 179 = 0xB3
   // Serial.print("Global current set to: ");
   // Serial.println(matrix.getGlobalCurrent());
 
